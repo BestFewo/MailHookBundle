@@ -4,14 +4,14 @@ namespace Swm\Bundle\MailHookBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 /**
  * @Route("/webhook")
  */
-class MailHookController extends Controller
+class MailHookController extends AbstractController
 {
     /**
      * @Route("/{secretSalt}/{service}/catch", name="swm_mailhook_catcher_for_service")
